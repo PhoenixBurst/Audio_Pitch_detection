@@ -32,8 +32,10 @@
 
 #include <board\inc\ex_sask_generic.h>
 #include <board\inc\ex_sask_led.h>
+#include <peripherals\timers\inc\ex_timer.h>
 
 #include "..\inc\ex_audio_process.h"
+#include "..\inc\LED_control.h"
 
 #define FRAME_SIZE 				512
 
@@ -43,6 +45,7 @@ int		ocPWMBuffer		[OCPWM_DMA_BUFSIZE]		__attribute__((space(dma)));
 int 		AudioIn	[FRAME_SIZE], AudioWorkSpace[ FRAME_SIZE ], AudioOut [FRAME_SIZE];
 
 int			i;
+int 		state=0;
 
 ADCChannelHandle adcChannelHandle;
 OCPWMHandle 	ocPWMHandle;
@@ -62,12 +65,19 @@ int main(void)
 
 	while(1)
 	{
-		while(ADCChannelIsBusy(pADCChannelHandle));
-		ADCChannelRead	(pADCChannelHandle,AudioIn,FRAME_SIZE);
+		if(state==0)
+		{
+			state=displayState(STATE_READY);
+		}
+		else
+		{
+			while(ADCChannelIsBusy(pADCChannelHandle));
+			ADCChannelRead	(pADCChannelHandle,AudioIn,FRAME_SIZE);
 	
-		ex_audio_process( FRAME_SIZE, AudioIn, AudioWorkSpace, AudioOut );
+			ex_audio_process( FRAME_SIZE, AudioIn, AudioWorkSpace, AudioOut );
 
-		while(OCPWMIsBusy(pOCPWMHandle));	
-		OCPWMWrite (pOCPWMHandle,AudioOut,FRAME_SIZE);
+			while(OCPWMIsBusy(pOCPWMHandle));	
+			OCPWMWrite (pOCPWMHandle,AudioOut,FRAME_SIZE);
+		}
 	}
 }
