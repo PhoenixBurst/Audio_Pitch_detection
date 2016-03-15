@@ -65,7 +65,7 @@ int main(void)
 		while(ADCChannelIsBusy(pADCChannelHandle));
 		ADCChannelRead	(pADCChannelHandle,AudioIn,FRAME_SIZE);
 	
-		ex_audio_process( FRAME_SIZE, AudioIn, AudioWorkSpace, AudioOut );
+		ex_audio_process( FRAME_SIZE, AudioIn, AudioWorkSpace, AudioOut );//test
 
 		while(OCPWMIsBusy(pOCPWMHandle));	
 		OCPWMWrite (pOCPWMHandle,AudioOut,FRAME_SIZE);
