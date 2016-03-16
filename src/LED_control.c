@@ -28,7 +28,7 @@
 
 #include "..\inc\LED_control.h"
 
-int currentState=1;
+int currentState;
 
 float instruction_clock_frequency, instruction_cycle_time;
 float wait_time;
@@ -93,7 +93,11 @@ void readyState()
 	int led_selector=0;
 	while(currentState==0)
 	{
-		if(SWITCH_S1==1) //bypassing checkswitch function
+		if((SWITCH_S1==0) && (SWITCH_S2==1)) //bypassing checkswitch function
+		{
+			currentState=1;
+		}
+		else
 		{
 			switch(led_selector)
 			{
@@ -121,14 +125,44 @@ void readyState()
 		
 			ex_timer_wait(timeout);
 		}
-		else
-		{
-			currentState=1;
-		}
 	}
 }
 
 void errorState()
 {
+	instruction_clock_frequency = clock_frequency;
+	instruction_cycle_time = 1.0 / instruction_clock_frequency;
 
+	ex_timer_init( instruction_cycle_time );
+
+	int current_led_state=FALSE;
+
+	while(1)
+	{
+		if((SWITCH_S1==0) && (SWITCH_S2==0))
+		{
+			current_led_state=FALSE;
+			currentState=0;
+			break;
+		}
+		else if(current_led_state==FALSE)
+		{
+			RED_LED=SASK_LED_ON;
+			YELLOW_LED=SASK_LED_ON;
+			GREEN_LED=SASK_LED_ON;
+
+			current_led_state=TRUE;
+		}
+		else if(current_led_state==TRUE)
+		{
+
+			RED_LED=SASK_LED_OFF;
+			YELLOW_LED=SASK_LED_OFF;
+			GREEN_LED=SASK_LED_OFF;
+
+			current_led_state=FALSE;
+		}
+
+		ex_timer_wait(timeout);
+	}
 }

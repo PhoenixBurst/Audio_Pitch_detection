@@ -26,6 +26,7 @@
   *****/
 
 #include <p33FJ256GP506.h>
+#include <dsp\h\dsp.h>
 #include <board\h\sask.h>
 #include <peripherals\adc\h\ADCChannelDrv.h>
 #include <peripherals\pwm\h\OCPWMDrv.h>
@@ -68,8 +69,9 @@ int main(void)
 		if(state==0)
 		{
 			state=displayState(STATE_READY);
+			displayLED(LED_OFF, LED_OFF, LED_OFF);
 		}
-		else
+		else if(state==1)
 		{
 			while(ADCChannelIsBusy(pADCChannelHandle));
 			ADCChannelRead	(pADCChannelHandle,AudioIn,FRAME_SIZE);
@@ -78,6 +80,15 @@ int main(void)
 
 			while(OCPWMIsBusy(pOCPWMHandle));	
 			OCPWMWrite (pOCPWMHandle,AudioOut,FRAME_SIZE);
+
+			if((SWITCH_S2==0) && (SWITCH_S1==1))
+			{
+				state=2;
+			}
+		}
+		else if(state==2)
+		{
+			state=displayState(STATE_ERROR);
 		}
 	}
 }

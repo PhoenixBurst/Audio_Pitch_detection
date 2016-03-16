@@ -30,15 +30,18 @@
 #ifndef __LED_CONTROL__
 #define __LED_CONTROL__
 
-#define STATE_READY 0
-#define STATE_RUN 1
-#define STATE_ERROR 2
+#define STATE_READY 0 //ready state
+#define STATE_RUN 1 //run state
+#define STATE_ERROR 2 //error state
 
-#define LED_ON 1
-#define LED_OFF 0
+#define LED_ON 1 //led on
+#define LED_OFF 0 //led off
 
-#define clock_frequency 40e6
-#define timeout 0.5
+#define TRUE 1 //bool true
+#define FALSE 0 //bool false
+
+#define clock_frequency 40e6 // standart clock frequency
+#define timeout 0.3 //wait time for the timer 
 
 int displayState(int state); //switch between different running states
 
