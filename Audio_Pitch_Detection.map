@@ -112,25 +112,24 @@ Data Memory Usage
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.icd                         0x800                0x50            0x50  (80)
-.xbss                        0x850                   0           0x400  (1024)
-.xbss                        0xc50                   0           0x200  (512)
-.nbss                        0xe50                   0           0x61c  (1564)
-.nbss                       0x146c                   0             0xe  (14)
-.nbss                       0x147a                   0             0x8  (8)
-.nbss                       0x1482                   0             0x6  (6)
-.nbss                       0x1488                   0             0x4  (4)
-.ndata                      0x148c                   0             0x4  (4)
-.nbss                       0x1490                   0             0x2  (2)
-.nbss                       0x1492                   0             0x2  (2)
-.ndata                      0x1494                   0             0x2  (2)
-.nbss                       0x1496                   0             0x2  (2)
+.xbss                        0x800                   0           0x400  (1024)
+.xbss                        0xc00                   0           0x200  (512)
+.nbss                        0xe00                   0           0x61c  (1564)
+.nbss                       0x141c                   0             0xe  (14)
+.nbss                       0x142a                   0             0x8  (8)
+.nbss                       0x1432                   0             0x6  (6)
+.nbss                       0x1438                   0             0x4  (4)
+.ndata                      0x143c                   0             0x4  (4)
+.nbss                       0x1440                   0             0x2  (2)
+.nbss                       0x1442                   0             0x2  (2)
+.ndata                      0x1444                   0             0x2  (2)
+.nbss                       0x1446                   0             0x2  (2)
 .ybss                       0x3c00                   0           0x400  (1024)
 .ybss                       0x4000                   0           0x400  (1024)
-_02c30f5056ec1dc5           0x4400                   0           0x200  (512)
-_02c30e0056ec1dc5           0x4600                   0           0x200  (512)
+_02c6ef5056ec2467           0x4400                   0           0x200  (512)
+_02c6ee0056ec2467           0x4600                   0           0x200  (512)
 
-                        Total data memory used (bytes):         0x1898  (6296) 38%
+                        Total data memory used (bytes):         0x1848  (6216) 37%
 
 
 Dynamic Memory Usage
@@ -138,34 +137,34 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x1498                              0x2768  (10088)
+stack                       0x1448                              0x27b8  (10168)
 
-                        Maximum dynamic memory (bytes):         0x2768  (10088)
+                        Maximum dynamic memory (bytes):         0x27b8  (10168)
 
 
 External Symbols in Data Memory (by address):
 
-                    0x0850                  _FFTcompTwidFactors
-                    0x0c50                  _FftFormatedAudio
-                    0x0e50                  _AudioIn
-                    0x1050                  _AudioWorkSpace
-                    0x1250                  _AudioOut
-                    0x1450                  _i
-                    0x1452                  _state
-                    0x1454                  _pitchResult
-                    0x1456                  _adcChannelHandle
-                    0x145e                  _ocPWMHandle
-                    0x146c                  _currentState
-                    0x146e                  _instruction_clock_frequency
-                    0x1472                  _instruction_cycle_time
-                    0x1476                  _wait_time
-                    0x147a                  _ex_timer_cycle_time
-                    0x147e                  _ex_timer_delay_cycles
-                    0x1488                  _debounceS1
-                    0x148a                  _debounceS2
-                    0x148c                  _pADCChannelHandle
-                    0x148e                  _pOCPWMHandle
-                    0x1494                  _peakFrequencyBin
+                    0x0800                  _FFTcompTwidFactors
+                    0x0c00                  _FftFormatedAudio
+                    0x0e00                  _AudioIn
+                    0x1000                  _AudioWorkSpace
+                    0x1200                  _AudioOut
+                    0x1400                  _i
+                    0x1402                  _state
+                    0x1404                  _pitchResult
+                    0x1406                  _adcChannelHandle
+                    0x140e                  _ocPWMHandle
+                    0x141c                  _currentState
+                    0x141e                  _instruction_clock_frequency
+                    0x1422                  _instruction_cycle_time
+                    0x1426                  _wait_time
+                    0x142a                  _ex_timer_cycle_time
+                    0x142e                  _ex_timer_delay_cycles
+                    0x1438                  _debounceS1
+                    0x143a                  _debounceS2
+                    0x143c                  _pADCChannelHandle
+                    0x143e                  _pOCPWMHandle
+                    0x1444                  _peakFrequencyBin
                     0x3c00                  _FFTcompWorkSpace
                     0x4000                  _FFTcompResults
                     0x4400                  _ocPWMBuffer
@@ -173,31 +172,31 @@ External Symbols in Data Memory (by address):
 
 External Symbols in Data Memory (by name):
 
-                    0x0e50                  _AudioIn
-                    0x1250                  _AudioOut
-                    0x1050                  _AudioWorkSpace
+                    0x0e00                  _AudioIn
+                    0x1200                  _AudioOut
+                    0x1000                  _AudioWorkSpace
                     0x4000                  _FFTcompResults
-                    0x0850                  _FFTcompTwidFactors
+                    0x0800                  _FFTcompTwidFactors
                     0x3c00                  _FFTcompWorkSpace
-                    0x0c50                  _FftFormatedAudio
+                    0x0c00                  _FftFormatedAudio
                     0x4600                  _adcBuffer
-                    0x1456                  _adcChannelHandle
-                    0x146c                  _currentState
-                    0x1488                  _debounceS1
-                    0x148a                  _debounceS2
-                    0x147a                  _ex_timer_cycle_time
-                    0x147e                  _ex_timer_delay_cycles
-                    0x1450                  _i
-                    0x146e                  _instruction_clock_frequency
-                    0x1472                  _instruction_cycle_time
+                    0x1406                  _adcChannelHandle
+                    0x141c                  _currentState
+                    0x1438                  _debounceS1
+                    0x143a                  _debounceS2
+                    0x142a                  _ex_timer_cycle_time
+                    0x142e                  _ex_timer_delay_cycles
+                    0x1400                  _i
+                    0x141e                  _instruction_clock_frequency
+                    0x1422                  _instruction_cycle_time
                     0x4400                  _ocPWMBuffer
-                    0x145e                  _ocPWMHandle
-                    0x148c                  _pADCChannelHandle
-                    0x148e                  _pOCPWMHandle
-                    0x1494                  _peakFrequencyBin
-                    0x1454                  _pitchResult
-                    0x1452                  _state
-                    0x1476                  _wait_time
+                    0x140e                  _ocPWMHandle
+                    0x143c                  _pADCChannelHandle
+                    0x143e                  _pOCPWMHandle
+                    0x1444                  _peakFrequencyBin
+                    0x1404                  _pitchResult
+                    0x1402                  _state
+                    0x1426                  _wait_time
 
 External Symbols in Program Memory (by address):
 
@@ -579,10 +578,6 @@ __FUID2
 
 __FUID3
  *(__FUID3.sec)
-
-.icd                0x0800         0x50
-                    0x0850                  . = (. + DEFINED (__ICD2RAM)?0x50:0x0)
- *fill*             0x0800         0x5000
 
 .comment
  *(.comment)
@@ -1836,9 +1831,6 @@ __FUID3
                     0x0230                  UART2 = 0x230
                     0x0230                  _UART2 = 0x230
                     0x0001                  __MPLAB_BUILD = 0x1
-                    0x0001                  __MPLAB_DEBUG = 0x1
-                    0x0001                  __MPLAB_DEBUGGER_SKDE = 0x1
-                    0x0001                  __ICD2RAM = 0x1
 START GROUP
 LOAD d:/programms/dsp/dev_envelopment/mplab c30/bin/../lib\libpic30-coff.a
 LOAD d:/programms/dsp/dev_envelopment/mplab c30/bin/../lib\libm-coff.a
@@ -1852,25 +1844,25 @@ LOAD default_isr
 .const              0x9454          0x4
  .const             0x9454          0x4 ex_sask_led.o
 
-_02c30e0056ec1dc5
+_02c6ee0056ec2467
                     0x4600        0x200
- _02c30e0056ec1dc5
+ _02c6ee0056ec2467
                     0x4600        0x200 Audio_Pitch_Detection.o
                     0x4600                  adcBuffer
 
-_02c30f5056ec1dc5
+_02c6ef5056ec2467
                     0x4400        0x200
- _02c30f5056ec1dc5
+ _02c6ef5056ec2467
                     0x4400        0x200 Audio_Pitch_Detection.o
                     0x4400                  ocPWMBuffer
 
-.xbss               0x0850        0x400
- .xbss              0x0850        0x400 FFT_Processing.o
-                    0x0850                  FFTcompTwidFactors
+.xbss               0x0800        0x400
+ .xbss              0x0800        0x400 FFT_Processing.o
+                    0x0800                  FFTcompTwidFactors
 
-.xbss               0x0c50        0x200
- .xbss              0x0c50        0x200 Audio_Pitch_Detection.o
-                    0x0c50                  FftFormatedAudio
+.xbss               0x0c00        0x200
+ .xbss              0x0c00        0x200 Audio_Pitch_Detection.o
+                    0x0c00                  FftFormatedAudio
 
 .ybss               0x4000        0x400
  .ybss              0x4000        0x400 Audio_Pitch_Detection.o
@@ -1880,55 +1872,55 @@ _02c30f5056ec1dc5
  .ybss              0x3c00        0x400 FFT_Processing.o
                     0x3c00                  FFTcompWorkSpace
 
-.nbss               0x0e50        0x61c
- .nbss              0x0e50        0x61c Audio_Pitch_Detection.o
-                    0x0e50                  AudioIn
-                    0x1050                  AudioWorkSpace
-                    0x1250                  AudioOut
-                    0x1450                  i
-                    0x1452                  state
-                    0x1454                  pitchResult
-                    0x1456                  adcChannelHandle
-                    0x145e                  ocPWMHandle
+.nbss               0x0e00        0x61c
+ .nbss              0x0e00        0x61c Audio_Pitch_Detection.o
+                    0x0e00                  AudioIn
+                    0x1000                  AudioWorkSpace
+                    0x1200                  AudioOut
+                    0x1400                  i
+                    0x1402                  state
+                    0x1404                  pitchResult
+                    0x1406                  adcChannelHandle
+                    0x140e                  ocPWMHandle
 
-.nbss               0x146c          0xe
- .nbss              0x146c          0xe LED_control.o
-                    0x146c                  currentState
-                    0x146e                  instruction_clock_frequency
-                    0x1472                  instruction_cycle_time
-                    0x1476                  wait_time
+.nbss               0x141c          0xe
+ .nbss              0x141c          0xe LED_control.o
+                    0x141c                  currentState
+                    0x141e                  instruction_clock_frequency
+                    0x1422                  instruction_cycle_time
+                    0x1426                  wait_time
 
-.nbss               0x147a          0x8
- .nbss              0x147a          0x8 ex_timer.o
-                    0x147a                  ex_timer_cycle_time
-                    0x147e                  ex_timer_delay_cycles
+.nbss               0x142a          0x8
+ .nbss              0x142a          0x8 ex_timer.o
+                    0x142a                  ex_timer_cycle_time
+                    0x142e                  ex_timer_delay_cycles
 
-.nbss               0x1482          0x6
- .nbss              0x1482          0x6 ex_sask_led.o
+.nbss               0x1432          0x6
+ .nbss              0x1432          0x6 ex_sask_led.o
 
-.nbss               0x1488          0x4
- .nbss              0x1488          0x4 sask.o
-                    0x1488                  debounceS1
-                    0x148a                  debounceS2
+.nbss               0x1438          0x4
+ .nbss              0x1438          0x4 sask.o
+                    0x1438                  debounceS1
+                    0x143a                  debounceS2
 
-.ndata              0x148c          0x4
- .ndata             0x148c          0x4 Audio_Pitch_Detection.o
-                    0x148c                  pADCChannelHandle
-                    0x148e                  pOCPWMHandle
+.ndata              0x143c          0x4
+ .ndata             0x143c          0x4 Audio_Pitch_Detection.o
+                    0x143c                  pADCChannelHandle
+                    0x143e                  pOCPWMHandle
 
-.nbss               0x1490          0x2
- .nbss              0x1490          0x2 OCPWMDrv.o
+.nbss               0x1440          0x2
+ .nbss              0x1440          0x2 OCPWMDrv.o
 
-.nbss               0x1492          0x2
- .nbss              0x1492          0x2 ADCChannelDrv.o
+.nbss               0x1442          0x2
+ .nbss              0x1442          0x2 ADCChannelDrv.o
 
-.ndata              0x1494          0x2
- .ndata             0x1494          0x2 FFT_Processing.o
-                    0x1494                  peakFrequencyBin
+.ndata              0x1444          0x2
+ .ndata             0x1444          0x2 FFT_Processing.o
+                    0x1444                  peakFrequencyBin
 
-.nbss               0x1496          0x2
- .nbss              0x1496          0x2 d:/programms/dsp/dev_envelopment/mplab c30/bin/../lib\libm-coff.a(errno.o)
-                    0x1496                  errno
+.nbss               0x1446          0x2
+ .nbss              0x1446          0x2 d:/programms/dsp/dev_envelopment/mplab c30/bin/../lib\libm-coff.a(errno.o)
+                    0x1446                  errno
 
 .dinit            0x001458         0x68
  .dinit           0x001458         0x68 data_init

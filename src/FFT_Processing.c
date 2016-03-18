@@ -79,7 +79,7 @@ int pitchDetection(fractcomplex *compXFftResults)
 	VectorMax(FFT_FRAME_SIZE/2, &FftResults[0], &peakFrequencyBin);
 
 	/* Compute the frequency (in Hz) of the largest spectral component */
-	detectedPitch = peakFrequencyBin*(8000/FFT_FRAME_SIZE);
+	detectedPitch = peakFrequencyBin*(SAMPLING_RATE/FFT_FRAME_SIZE);
 	
 	if(detectedPitch<=800)
 	{
