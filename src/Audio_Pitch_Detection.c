@@ -84,7 +84,6 @@ int main(void)
 	
 			//ex_audio_process( FRAME_SIZE, AudioIn, AudioWorkSpace, AudioOut );
 		
-			convertInputForFFT(&AudioIn, &FftFormatedAudio);
 			FFT(FRAME_SIZE, &AudioIn, &FFTcompResults);
 			pitchResult=pitchDetection(&FFTcompResults);
 
