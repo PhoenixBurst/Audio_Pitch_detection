@@ -125,7 +125,7 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0xe30                   0             0x2  (2)
 .ybss                       0x3e00                   0           0x400  (1024)
 .ybss                       0x4200                   0           0x400  (1024)
-_02b10c4056f43538           0x4600                   0           0x200  (512)
+_02bcac4056fd407c           0x4600                   0           0x200  (512)
 
                         Total data memory used (bytes):         0x1032  (4146) 25%
 
@@ -1823,9 +1823,9 @@ LOAD default_isr
 .const              0x9410          0x4
  .const             0x9410          0x4 ex_sask_led.o
 
-_02b10c4056f43538
+_02bcac4056fd407c
                     0x4600        0x200
- _02b10c4056f43538
+ _02bcac4056fd407c
                     0x4600        0x200 Audio_Pitch_Detection.o
                     0x4600                  adcBuffer
 

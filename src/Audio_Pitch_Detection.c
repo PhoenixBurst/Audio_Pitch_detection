@@ -17,7 +17,7 @@
 *		This is due to the resolution not being able to pick up smaller frequencies, higher ones will show 0s in all pins and therefore the highest occurence will be displayed, 
 *		thereby setting the pitch to 4kHz.
 *
-*		The resolution is also responsiable for small errors in display occuring in a small window surrounding the switch points at 800, 1600, 2400, 3200 Hz[+- ~15 Hz]
+*		The resolution is also responsiable for small errors in display occuring in a small window surrounding the switch points at 800, 1600, 2400, 3200 Hz[+- ~16 Hz]
 *
 * ToDo:
 *     none
